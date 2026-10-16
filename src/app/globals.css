@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f1eee5;
+  color: #242820;
+  font-family: var(--font-inter), Arial, sans-serif;
+}
+
+.dark body {
+  background: #1b1e1a;
+  color: #f5f3ee;
+}
+
+::selection {
+  background: rgba(93, 113, 79, 0.24);
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass-card {
+    @apply rounded-3xl border border-black/5 bg-white/80 shadow-[0_20px_60px_rgba(20,18,15,0.06)] backdrop-blur-sm dark:border-white/10 dark:bg-[#1f241f]/80;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-moss/20 bg-moss/5 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-moss dark:border-white/10 dark:bg-white/5 dark:text-leaf;
+  }
+}
